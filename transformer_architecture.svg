@@ -46,77 +46,82 @@
 <text x='607.0' y='169.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Linear</text>
 <circle cx='680' cy='164.0' r='10' fill='#2F3B52'/>
 <text x='680' y='168.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>12</text>
-<path d='M615,224 L615,182' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<rect x='520' y='224' width='190' height='30' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
-<text x='607.0' y='244.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
-<circle cx='695' cy='239.0' r='10' fill='#2F3B52'/>
-<text x='695' y='243.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
-<rect x='520' y='262' width='190' height='56' rx='6' fill='#CBE8F6' stroke='#5FA3C4' stroke-width='1.6'/>
-<text x='607.0' y='286.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Feed</text>
-<text x='607.0' y='303.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Forward</text>
-<circle cx='695' cy='290.0' r='10' fill='#2F3B52'/>
-<text x='695' y='294.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>6</text>
-<path d='M615,350 L615,320' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<rect x='520' y='350' width='190' height='30' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
-<text x='607.0' y='370.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
-<circle cx='695' cy='365.0' r='10' fill='#2F3B52'/>
-<text x='695' y='369.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
-<rect x='520' y='390' width='190' height='58' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
-<text x='607.0' y='415.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
-<text x='607.0' y='432.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Cross-Attention</text>
-<circle cx='695' cy='419.0' r='10' fill='#2F3B52'/>
-<text x='695' y='423.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>11</text>
-<rect x='520' y='500' width='190' height='30' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
-<text x='607.0' y='520.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
-<circle cx='695' cy='515.0' r='10' fill='#2F3B52'/>
-<text x='695' y='519.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
-<rect x='520' y='540' width='190' height='70' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
-<text x='607.0' y='563.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Masked</text>
-<text x='607.0' y='580.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
-<text x='607.0' y='597.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Self-Attention</text>
-<circle cx='695' cy='575.0' r='10' fill='#2F3B52'/>
-<text x='695' y='579.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>10</text>
-<path d='M615,334 L726,334 L726,239 L712,239' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M615,500 L615,478 L660,478 L660,450' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<text x='670' y='468' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='start' fill='#B05A00' >Q</text>
-<path d='M615,478 L726,478 L726,365 L712,365' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M615,670 L615,622' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
-<path d='M570,622 L660,622' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
-<path d='M570,622 L570,612' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M615,622 L615,612' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M660,622 L660,612' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M615,638 L726,638 L726,515 L712,515' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<rect x='160' y='380' width='190' height='30' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
-<text x='247.0' y='400.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
-<circle cx='335' cy='395.0' r='10' fill='#2F3B52'/>
-<text x='335' y='399.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
-<rect x='160' y='420' width='190' height='56' rx='6' fill='#CBE8F6' stroke='#5FA3C4' stroke-width='1.6'/>
-<text x='247.0' y='444.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Feed</text>
-<text x='247.0' y='461.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Forward</text>
-<circle cx='335' cy='448.0' r='10' fill='#2F3B52'/>
-<text x='335' y='452.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>6</text>
-<path d='M255,506 L255,478' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<rect x='160' y='506' width='190' height='30' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
-<text x='247.0' y='526.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
-<circle cx='335' cy='521.0' r='10' fill='#2F3B52'/>
-<text x='335' y='525.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
-<rect x='160' y='546' width='190' height='56' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
-<text x='247.0' y='570.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
-<text x='247.0' y='587.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Self-Attention</text>
-<circle cx='335' cy='574.0' r='10' fill='#2F3B52'/>
-<text x='335' y='578.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>4</text>
-<path d='M255,492 L144,492 L144,395 L158,395' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M255,670 L255,616' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
-<path d='M210,616 L300,616' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
-<path d='M210,616 L210,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M255,616 L255,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M300,616 L300,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M255,632 L144,632 L144,521 L158,521' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M255,380 L255,336 L435,336 L435,466 L595,466' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
-<path d='M550,466 L550,450' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<path d='M595,466 L595,450' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
-<text x='542' y='462' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='end' fill='#B05A00' >K</text>
-<text x='587' y='462' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='end' fill='#B05A00' >V</text>
+<path d='M615,214 L615,182' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='520' y='214' width='190' height='26' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
+<text x='607.0' y='232.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
+<circle cx='695' cy='227.0' r='10' fill='#2F3B52'/>
+<text x='695' y='231.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
+<rect x='520' y='256' width='190' height='50' rx='6' fill='#CBE8F6' stroke='#5FA3C4' stroke-width='1.6'/>
+<text x='607.0' y='277.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Feed</text>
+<text x='607.0' y='294.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Forward</text>
+<circle cx='695' cy='281.0' r='10' fill='#2F3B52'/>
+<text x='695' y='285.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>6</text>
+<path d='M615,256 L615,241' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='520' y='340' width='190' height='26' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
+<text x='607.0' y='358.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
+<circle cx='695' cy='353.0' r='10' fill='#2F3B52'/>
+<text x='695' y='357.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
+<path d='M615,340 L615,307' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='520' y='382' width='190' height='54' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
+<text x='607.0' y='405.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
+<text x='607.0' y='422.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Cross-Attention</text>
+<circle cx='695' cy='409.0' r='10' fill='#2F3B52'/>
+<text x='695' y='413.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>11</text>
+<path d='M615,382 L615,367' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='520' y='490' width='190' height='26' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
+<text x='607.0' y='508.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
+<circle cx='695' cy='503.0' r='10' fill='#2F3B52'/>
+<text x='695' y='507.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
+<rect x='520' y='534' width='190' height='68' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
+<text x='607.0' y='556.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Masked</text>
+<text x='607.0' y='573.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
+<text x='607.0' y='590.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Self-Attention</text>
+<circle cx='695' cy='568.0' r='10' fill='#2F3B52'/>
+<text x='695' y='572.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>10</text>
+<path d='M615,534 L615,517' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M615,323 L726,323 L726,227 L712,227' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M615,490 L615,470 L660,470 L660,438' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<text x='670' y='462' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='start' fill='#B05A00' >Q</text>
+<path d='M615,470 L726,470 L726,353 L712,353' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M615,670 L615,620' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
+<path d='M570,620 L660,620' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
+<path d='M570,620 L570,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M615,620 L615,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M660,620 L660,604' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M615,636 L726,636 L726,503 L712,503' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='160' y='376' width='190' height='26' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
+<text x='247.0' y='394.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
+<circle cx='335' cy='389.0' r='10' fill='#2F3B52'/>
+<text x='335' y='393.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
+<rect x='160' y='420' width='190' height='52' rx='6' fill='#CBE8F6' stroke='#5FA3C4' stroke-width='1.6'/>
+<text x='247.0' y='442.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Feed</text>
+<text x='247.0' y='459.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Forward</text>
+<circle cx='335' cy='446.0' r='10' fill='#2F3B52'/>
+<text x='335' y='450.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>6</text>
+<path d='M255,420 L255,403' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='160' y='500' width='190' height='26' rx='6' fill='#F1F5C4' stroke='#A9B160' stroke-width='1.6'/>
+<text x='247.0' y='518.0' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Add &amp; Norm</text>
+<circle cx='335' cy='513.0' r='10' fill='#2F3B52'/>
+<text x='335' y='517.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>5</text>
+<path d='M255,500 L255,473' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<rect x='160' y='544' width='190' height='54' rx='6' fill='#FDDDB7' stroke='#D19A56' stroke-width='1.6'/>
+<text x='247.0' y='567.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Multi-Head</text>
+<text x='247.0' y='584.5' font-family='Inter, Arial, Helvetica, sans-serif' font-size='14.5' text-anchor='middle' fill='#222'>Self-Attention</text>
+<circle cx='335' cy='571.0' r='10' fill='#2F3B52'/>
+<text x='335' y='575.2' font-family='Inter, Arial, Helvetica, sans-serif' font-size='11.5' font-weight='700' text-anchor='middle' fill='white'>4</text>
+<path d='M255,544 L255,527' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M255,487 L144,487 L144,389 L158,389' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M255,670 L255,614' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
+<path d='M210,614 L300,614' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
+<path d='M210,614 L210,600' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M255,614 L255,600' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M300,614 L300,600' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M255,630 L144,630 L144,513 L158,513' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M255,376 L255,336 L435,336 L435,458 L595,458' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round'/>
+<path d='M550,458 L550,438' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<path d='M595,458 L595,438' fill='none' stroke='#222' stroke-width='1.8' stroke-linejoin='round' marker-end='url(#ah)'/>
+<text x='542' y='454' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='end' fill='#B05A00' >K</text>
+<text x='587' y='454' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='700' text-anchor='end' fill='#B05A00' >V</text>
 <text x='263' y='328' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12.5' font-weight='600' text-anchor='start' fill='#444' >encoder output (“memory”)</text>
 <text x='263' y='352' font-family='Inter, Arial, Helvetica, sans-serif' font-size='12' font-weight='400' text-anchor='start' fill='#666' >→ fed to every decoder layer</text>
 <circle cx='255' cy='680' r='9' fill='white' stroke='#222' stroke-width='1.6'/>

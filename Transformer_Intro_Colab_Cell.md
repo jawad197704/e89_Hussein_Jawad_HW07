@@ -9,20 +9,47 @@
 
 A **Transformer** is a neural network that turns one sequence of **tokens** (words or pieces of words) into another. Translation is the classic example. It was introduced in the 2017 paper *"Attention Is All You Need"*.
 
-**Why "Transformer"?** Apart from the embedding and output layers, **every layer takes a tensor of shape `[batch size, sentence length, embedding size]` and returns a tensor of exactly the same shape**. The tensor stays the same size. What changes is what each token's vector *means*: it is **gradually transformed**, layer by layer, until it captures what the token means *in this particular sentence*.
+### From words to numbers: tokenizer & vocabulary
+
+- **Vocabulary:** a fixed, numbered list of tokens, **built once from the training text** by keeping the most common words or word pieces. Pretrained models come with their own.
+- **Token ID:** a token's number **in the vocabulary**, *not* its position in the sentence. `like` is always `5`, wherever it appears.
+- **Tokenizer:** splits text and looks up each token: `"I like soccer"` → `[I, like, soccer]` → `[4, 5, 6]`. Special tokens get IDs too: `<pad>`=0, `<s>`=1, `</s>`=2.
+- **Position** is added later by the **Positional Embedding** [3], and the vocabulary size **V** sets the size of the embedding table [2] and the output layer [12] *(numbers refer to the diagram below)*.
+
+**Why "Transformer"?** Apart from the embedding and output layers, **every layer takes a tensor of shape `[batch size, sentence length, embedding size]` and returns a tensor of exactly the same shape**.
+
+*Example:* a batch of 3 sentences. Shorter ones are padded with `<pad>` to match the longest, and every cell holds one token's vector of 512 numbers:
+
+| | Token 1 | Token 2 | Token 3 | Token 4 |
+|---|---|---|---|---|
+| **Sentence 1** | I | like | soccer | `<pad>` |
+| **Sentence 2** | Hello | `<pad>` | `<pad>` | `<pad>` |
+| **Sentence 3** | She | plays | the | piano |
+
+**What the three numbers mean:**
+
+| Dimension | Meaning | In the example |
+|---|---|---|
+| **Batch size** | Sentences processed together (faster on a GPU) | **3** (rows) |
+| **Sentence length** | Tokens in the longest sentence in the batch | **4** (columns) |
+| **Embedding size** | Numbers describing each token (512 in the paper, 128 in Géron's small model) | **512** (inside each cell) |
+
+So the shape is **`[3, 4, 512]`**. The tensor stays the same size. What changes is what each token's vector *means*: it is **gradually transformed**, layer by layer, until it captures what the token means *in this particular sentence*.
 
 > **Example (Géron):** the word **"like"** is vague on its own ("I'm *like* a cat" vs. "I *like* my cat"). After the encoder has seen the whole sentence "I like soccer", the vector for "like" captures the meaning *"to be fond of"* and the fact that it is a verb.
 
-The model has two halves:
+The model has two halves. Think of a **human interpreter** translating "I like soccer" into Spanish:
 
-| Half | Job | Analogy |
+| | **Encoder** (left of the diagram) | **Decoder** (right of the diagram) |
 |---|---|---|
-| **Encoder** (left of the diagram) | Reads the whole source sentence and outputs **one context-rich vector per token** | A translator who reads the full sentence and takes detailed notes |
-| **Decoder** (right of the diagram) | Takes the encoder's notes plus **the translation so far**, and predicts the **next token** | A writer who writes the translation one word at a time, checking the notes before each word |
+| **Job** | Reads the whole source sentence.<br>Outputs **one context-rich vector per token**. | Takes the encoder's notes + **the translation so far**.<br>Predicts the **next token**. |
+| **Interpreter** | First **reads the whole English sentence**<br>and puts a note on every word saying what it means *here*:<br>"like" → *"verb: to be fond of"*. | Then **speaks Spanish one word at a time**. Before each word:<br>① recalls what they've already said ("me gusta el…")<br>② checks the note for "soccer" → says **"fútbol"**. |
+
+① is **masked self-attention** [10]: the decoder can only look back at words already said. ② is **cross-attention** [11]: the decoder looks at the encoder's notes.
 
 ## The running example (from Géron)
 
-We translate **"I like soccer" → "me gusta el fútbol"**. The decoder is called **once per output token**, and each call adds one token:
+We translate **"I like soccer" → "me gusta el fútbol"**. The encoder reads the English sentence **once**. The decoder then runs in a **loop**: each run sees the translation so far, predicts **one** next word, and adds it, like phone autocomplete. It stops when it predicts the end token `</s>`:
 
 | Call | Decoder input (translation so far) | Predicted next token |
 |---|---|---|
