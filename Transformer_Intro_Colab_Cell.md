@@ -38,61 +38,12 @@ We translate **"I like soccer" → "me gusta el fútbol"**. The decoder is calle
 
 ## The architecture at a glance
 
-Read the diagram **bottom → top**. The numbers `[1]`–`[13]` match the table that follows.
+Read the diagram **bottom → top**. The numbered circles match the table below. The colours follow the original paper's figure. The example shows call 4 from the table above: the decoder has `<s> me gusta el` and predicts **fútbol**.
 
-```text
-                                              OUTPUT PROBABILITIES (next token)
-                                           P("fútbol")=0.92  P("partido")=0.03
-                                                           ▲
-                                               ┌───────────────────────┐
-                                               │ [13] Softmax  (*)     │
-                                               └───────────────────────┘
-                                                           ▲
-                                               ┌───────────────────────┐
-                                               │ [12] Linear → logits  │
-                                               └───────────────────────┘
-                                                           ▲
-                                          ┌──────────────────────────────────┐
-                                          │ DECODER LAYER          [7] × N   │
-                                          │   ┌─────────────────────────┐    │
-                                          │   │ [5] Add & Norm          │    │
-                                          │   │ [6] Feed Forward        │    │
-                                          │   └─────────────────────────┘    │
-                                          │                ▲                 │
-                                          │   ┌─────────────────────────┐    │
-                   encoder output (K, V)  │   │ [5] Add & Norm          │    │
-                 ┌────────────────────────┼──►│ [11] Multi-Head         │    │
-                 │ fed to EVERY           │   │      Cross-Attention    │    │
-                 │ decoder layer          │   └─────────────────────────┘    │
-                 │                        │                ▲                 │
- ┌───────────────┴──────────────┐         │   ┌─────────────────────────┐    │
- │ ENCODER LAYER      [7] × N   │         │   │ [5] Add & Norm          │    │
- │  ┌────────────────────────┐  │         │   │ [10] Masked Multi-Head  │    │
- │  │ [5] Add & Norm         │  │         │   │      Self-Attention     │    │
- │  │ [6] Feed Forward       │  │         │   └─────────────────────────┘    │
- │  └────────────────────────┘  │         └────────────────▲─────────────────┘
- │               ▲              │                          │
- │  ┌────────────────────────┐  │                          │
- │  │ [5] Add & Norm         │  │                          │
- │  │ [4] Multi-Head         │  │                          │
- │  │     Self-Attention     │  │                          │
- │  └────────────────────────┘  │                          │
- └───────────────▲──────────────┘                          │
-                 │                                         │
-                (+)◄── [3] Positional                     (+)◄── [3] Positional
-                 ▲     Embedding                           ▲     Embedding
-     ┌───────────────────────┐                 ┌───────────────────────┐
-     │ [2] Input Embedding   │                 │ [9] Output Embedding  │
-     └───────────────────────┘                 └───────────────────────┘
-                 ▲                                         ▲
-                 │                                         │
-                 │                                         │
-            [1] Inputs                        [8] Outputs (shifted right)
-          "I like soccer"                          "<s> me gusta el"
-```
+![Transformer architecture](transformer_architecture.png)
 
 - **N** = number of stacked layers: **6 in the paper**, **2 in Géron's small model**.
-- **(\*) Softmax:** in PyTorch this is *not* a layer inside the model. The model outputs **logits**, and `nn.CrossEntropyLoss` applies the softmax internally. Call `F.softmax()` if you want the probabilities.
+- **Softmax [13]:** in PyTorch this is *not* a layer inside the model. The model outputs **logits**, and `nn.CrossEntropyLoss` applies the softmax internally. Call `F.softmax()` if you want the probabilities.
 
 ---
 
