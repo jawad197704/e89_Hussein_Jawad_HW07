@@ -105,4 +105,4 @@ Read the diagram **bottom → top**. The numbered circles match the table below.
 | **3 – GPU memory** | Memory holds the **model weights**, the **Adam optimizer state** (two extra values per weight), **activations**, and the **attention grids**, which grow with *L²*. Géron's cleanup recipe: `del` the objects, then `gc.collect()`, then `torch.cuda.empty_cache()`. |
 | **4 – BLEU score** | Scores a translation by how many **n-grams** (1–4 word chunks) it shares with a human reference translation. Higher is better. |
 
-> **Next cell (optional):** *Going deeper* covers how attention computes its weights, the masks, and where each diagram box lives in Géron's code. Skip it for now and come back when you start Problem 2.
+> **Coming up:** the next two cells walk through the whole translation and one training step. After that, *Going deeper* (optional) covers how attention computes its weights, the masks, and where each diagram box lives in Géron's code. Come back to that one when you start Problem 2.
